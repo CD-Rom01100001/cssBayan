@@ -15,7 +15,8 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
+	font-family: 'Roboto', sans-serif;
+	font-weight: 900;
 	vertical-align: baseline;
 }
 article, aside, details, figcaption, figure, 
@@ -42,4 +43,7 @@ q:before, q:after {
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
+}
+a{
+  text-decoration: none; /* no underline */
 }
