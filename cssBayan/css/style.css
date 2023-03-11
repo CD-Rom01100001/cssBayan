@@ -1,13 +1,13 @@
 .wrapper {
-   width: 100%;
+   width: 100%; /*! меняется для ПК(70%) */
    margin: 0 auto;
 }
 .accordion {
-   padding: .8em .8em 5em .8em;
+   padding: .8em 1em 5em 1em; /*! меняется для ПК */
    background: #F5F5EB;
 }
 .accordion__title{
-   font-size: 1.8em;
+   font-size: 2em; /*! меняется для ПК(3em) */
    line-height: 1.5em;
    border-bottom: 2px solid #cccccc80;
 }
@@ -19,10 +19,10 @@
 .accordionItem__trigger {
    display: flex;
    flex-direction: column;
-   max-height: 2em;
-   color: blue;
+   max-height: 2.5em; /*! меняется для 820(2.5em) ПК(2em) */
+   color: #0059D9;
    overflow: hidden;
-   transition: max-height 0.4s ease-i-n-out;
+   transition: max-height 0.4s ease-in-out;
 }
 .accordion li:not(:last-child) {
    border-bottom: 2px solid #cccccc80;
@@ -32,23 +32,23 @@
    display: flex;
    justify-content: space-between;
    align-items: center;
-   padding: .5em 0;
+   padding: 0.7em 0; /*! меняется для 820() ПК() */
    width: 100%;
 }
 .accordionItem__textCross>p{
+   font-size: 1.3em; /*! меняется для ПК() */
    transition: color .2s;
 }
 
 .cross{
    width: 12px;
    height: 12px;
-   opacity: 0;
+   opacity: 1; /*! меняется для ПК() */
    transform: rotate(45deg);
-   transition: color .2s;
 }
 
 .accordionItem__content {
-   max-width: 50%;
+   max-width: 80%; /*! меняется для ПК(50%-40%) */
    height: auto;
    margin: 1em auto 1em auto;
    transition: .3s;
@@ -74,26 +74,14 @@
 
 /* active */
 .accordionItem__trigger:active .accordionItem__textCross>p{
-   color: blue;
+   color: #0059D9;
 }
 .accordionItem__trigger:active .cross svg path{
-   fill: blue;
+   fill: #0059D9;
+   transition: fill .2s;
 }
 .accordionItem__trigger:active .accordionItem__content>img{
    opacity: 0.7;
 }
 
-/* hover */
-.accordion:hover .cross{
-   opacity: 1;
-}
-.accordion:hover .accordionItem__trigger{
-   color:#000;
-}
-.accordionItem__trigger:hover .cross{
-   transform: rotate(90deg);
-}
-.accordionItem:hover .accordionItem__trigger{
-   max-height: 1000px;
-   transition: max-height .8s ease-in-out;
-}
+
