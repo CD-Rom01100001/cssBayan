@@ -1,13 +1,13 @@
 .wrapper {
-   width: 100%; /*! меняется для ПК(70%) */
+   width: 100%;
    margin: 0 auto;
 }
 .accordion {
-   padding: .8em 1em 5em 1em; /*! меняется для ПК */
+   padding: .8em 1em 5em 1em; 
    background: #F5F5EB;
 }
 .accordion__title{
-   font-size: 2em; /*! меняется для ПК(3em) */
+   font-size: 2em;
    line-height: 1.5em;
    border-bottom: 2px solid #cccccc80;
 }
@@ -19,7 +19,7 @@
 .accordionItem__trigger {
    display: flex;
    flex-direction: column;
-   max-height: 3em; /*! меняется для 820(2.5em) ПК(2em) */
+   max-height: 3em;
    color: #0059D9;
    overflow: hidden;
    transition: max-height 0.4s ease-in-out;
@@ -35,6 +35,7 @@
    padding: 0.9em 0; /*! меняется для 820() ПК() */
    width: 100%;
 }
+
 .accordionItem__textCross>p{
    font-size: 1.3em; /*! меняется для ПК() */
    transition: color .2s;
@@ -53,6 +54,7 @@
    margin: 1em auto 1em auto;
    transition: .3s;
 }
+
 .accordionItem__content>img{
    width: 100%;
    opacity: 1;
@@ -61,8 +63,8 @@
 
 /* checked */
 .accordionItem__input:checked~.accordionItem__trigger{
-   max-height: 1000px;
-   transition: max-height .8s ease-in-out;
+   max-height: 50em;
+   transition: max-height .6s ease-in-out;
 }
 .accordionItem__input:checked~.accordionItem__trigger p{
    color:#000;
@@ -70,7 +72,6 @@
 .accordionItem__input:checked~.accordionItem__trigger .cross{
    transform: rotate(90deg);
 }
-
 
 /* active */
 .accordionItem__trigger:active .accordionItem__textCross>p{
@@ -102,6 +103,55 @@
    }
    .accordionItem__content {
       max-width: 50%;
+   }
+}
+
+@media(min-width: 1024px){
+   html {
+      width:100vw;
+      overflow-x:hidden;
+   }
+   .wrapper {
+      width: 40%;
+   }
+   .accordion__title{
+      margin-top: .5em;
+      padding-bottom: .5em;
+      font-size: 1.6em;
+   }
+   .accordionItem__trigger {
+      max-height: 2em;
+      transition: max-height 0.6s ease-in-out;
+   }
+   .accordionItem__textCross{
+      padding: 0.6em 0;
+   }
+   .accordionItem__textCross>p{
+      font-size: 1em;
+   }
+   .accordionItem__content {
+      max-width: 50%;
+   }
+   .cross{
+      opacity: 0;
+   }
+
+   /* hover */
+   .accordionItem__trigger:hover{
+      cursor: pointer;
+   }
+   .accordion:hover .cross{
+      opacity: 1;
+   }
+   .accordion:hover .accordionItem__trigger{
+      color:#000;
+   }
+   .accordionItem__trigger:hover .cross{
+      transform: rotate(90deg);
+   }
+   .accordionItem:hover .accordionItem__trigger{
+      max-height: 40em;
+      transition: max-height .6s ease-in-out;
    }
 }
 
