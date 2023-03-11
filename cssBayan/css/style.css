@@ -42,8 +42,8 @@
 }
 
 .cross{
-   width: 12px;
-   height: 12px;
+   width: 0.75em;
+   height: 0.75em;
    opacity: 1; /*! меняется для ПК() */
    transform: rotate(45deg);
 }
