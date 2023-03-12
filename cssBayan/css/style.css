@@ -9,7 +9,7 @@
 .accordion__title{
    font-size: 2em;
    line-height: 1.5em;
-   border-bottom: 2px solid #cccccc80;
+   border-bottom: 0.125rem solid #cccccc80;
 }
 .accordionItem {
 }
@@ -25,7 +25,7 @@
    transition: max-height 0.4s ease-in-out;
 }
 .accordion li:not(:last-child) {
-   border-bottom: 2px solid #cccccc80;
+   border-bottom: 0.125rem solid #cccccc80;
 }
 
 .accordionItem__textCross{
@@ -46,6 +46,7 @@
    height: 0.75em;
    opacity: 1; /*! меняется для ПК() */
    transform: rotate(45deg);
+   transition: .2s;
 }
 
 .accordionItem__content {
